@@ -1,0 +1,27 @@
+
+  app1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8081" # Redirige el puerto 8082 en la máquina al puerto 8081 del contenedor
+    volumes:
+      - /home/sysdist-1/practicaParcialDist/test/data:/app/data # Montar la carpeta 'data' en la ruta '/app/data'
+  
+  app2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8081" # Redirige el puerto 8083 en la máquina al puerto 8081 del contenedor
+    volumes:
+      - /home/sysdist-1/practicaParcialDist/test/data:/app/data # Montar la carpeta 'data' en la ruta '/app/data'
+  
+  app3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8081" # Redirige el puerto 8084 en la máquina al puerto 8081 del contenedor
+    volumes:
+      - /home/sysdist-1/practicaParcialDist/test/data:/app/data # Montar la carpeta 'data' en la ruta '/app/data'
